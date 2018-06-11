@@ -4,7 +4,7 @@ https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/description
   
   <h2>Ideas</h2><br>
   Since this question requires a O(N) solution, the naive way doesn't work.  <br>
-  The main idea is the decide the bit of the max XOR from its most significant bit, and that's why we need a mask.  <br>
+  The main idea is the decide the bit of the max XOR from its most significant bit, and that's why we need a mask.  <br><br>
   1. In every loop of k, we are focusing only on the first k bit of each nums, adding it to the memo set.  <br>
   2. Next, by the property of XOR, we knew that A XOR B = C can be written as A = B XOR C.
   By traversing every number in nums[] to see if the memo comtains tmp(the currnt max with 1 on its k bit) XOR (nums[i] & mask), the first k bits of nums[i]  <br>
